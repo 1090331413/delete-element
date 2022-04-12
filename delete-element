@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+	int a[100] = {0}, i, j, n;
+	printf("����������Ԫ�ظ���n:\n");
+	scanf("%d", &n);
+	printf("������������:\n"); 
+	for(i = 0; i<n; i++)
+		scanf("%d", &a[i]);
+	printf("����ɾ������:\n");
+	scanf("%d", &j);
+	while(j<n)
+	{
+		a[j-1] = a[j];
+		j++;
+	}
+	i = 1;
+	while(a[i] != 0)
+	{
+		printf("%d", a[i-1]);
+		i++;
+	}
+	return 0;
+}
